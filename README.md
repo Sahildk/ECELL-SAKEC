@@ -38,3 +38,16 @@ A modern and responsive website for the **Entrepreneurship Cell (E-Cell)**, buil
 ```bash
 git clone https://github.com/Sahildk/ECELL-SAKEC.git
 cd your-repo
+```
+
+2. **Install dependencies**
+```bash
+  npm install
+  # or
+  yarn install
+```
+
+3. **Run development server**
+  ```bash
+   npm run dev
+```
