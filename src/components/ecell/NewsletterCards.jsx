@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const NewsletterCards = () => {
   return (
     <div className="cards justify-center items-center w-full max-w-5xl mx-auto px-4 font-inter antialiased">
       {/* First Card */}
-      <Link to="/newsletters" className="card cursor-pointer">
+      <div className="card">
         <div className="card-bg">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
@@ -27,10 +26,10 @@ const NewsletterCards = () => {
             <img src="/ecell-logo.png" alt="" />
           </div>
         </div>
-      </Link>
+      </div>
 
       {/* Second Card */}
-      <Link to="/newsletters" className="card cursor-pointer">
+      <div className="card">
         <div className="card-bg">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -52,7 +51,7 @@ const NewsletterCards = () => {
             <img src="/ecell-logo.png" alt="" />
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

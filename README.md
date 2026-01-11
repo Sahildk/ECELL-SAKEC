@@ -1,53 +1,63 @@
-# 🚀 E-Cell Website  
+# E-Cell Website
 
-A modern and responsive website for the **Entrepreneurship Cell (E-Cell)**, built with **React + Vite**, featuring smooth animations, interactive 3D elements, and a clean UI.  
+A modern website for the Entrepreneurship Cell built with React and Vite.
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack  
+- React
+- Vite
+- Tailwind CSS
+- Shadcn UI Components
 
-- ⚛️ **React** – Component-based UI  
-- ⚡ **Vite** – Fast build & development server  
-- 🎨 **Tailwind CSS** – Utility-first styling  
-- 🧩 **Shadcn UI** – Pre-built accessible components  
-- 🎭 **Spline** – Interactive 3D scenes  
+## Getting Started
 
----
+### Prerequisites
 
-## ⚡ Features  
+- Node.js (v14 or higher)
+- npm or yarn
 
-✅ Modern UI with smooth animations  
-✅ Fully responsive across devices  
-✅ Interactive **3D scenes** powered by Spline  
-✅ **Countdown timer** for events  
-✅ Dynamic text animations  
-✅ Modular & reusable components  
+### Installation
 
----
-
-## 🚀 Getting Started  
-
-### ✅ Prerequisites  
-- [Node.js](https://nodejs.org/) (v14 or higher)  
-- npm or yarn  
-
-### 📦 Installation  
-
-1. **Clone the repository**  
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/Sahildk/ECELL-SAKEC.git
-cd your-repo
+git clone [your-repo-url]
 ```
 
-2. **Install dependencies**
+2. Install dependencies:
+
 ```bash
-  npm install
-  # or
-  yarn install
+npm install
 ```
 
-3. **Run development server**
-  ```bash
-   npm run dev
+3. Start the development server:
+
+```bash
+npm run dev
 ```
+
+The application will start running at `http://localhost:5173`
+
+## Features
+
+- Modern UI with animated components
+- Responsive design
+- Interactive 3D scenes using Spline
+- Countdown timer functionality
+- Dynamic text animations
+
+## Project Structure
+
+- `/src` - Source code
+  - `/components` - Reusable UI components
+  - `/pages` - Main page components
+  - `/assets` - Static assets
+  - `/lib` - Utility functions
+
+## Contributing
+
+Feel free to submit issues and pull requests.
+
+## License
+
+This project is licensed under the MIT License.

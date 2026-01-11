@@ -1,14 +1,9 @@
-"use client";
+"use client";;
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import pg1 from "../assets/team/pg1.png";
 import pg2 from "../assets/team/pg2.png";
 import pg3 from "../assets/team/pg3.png";
@@ -17,6 +12,7 @@ import pg5 from "../assets/team/pg5.png";
 import pg6 from "../assets/team/pg6.png";
 import pg7 from "../assets/team/pg7.png";
 import pg8 from "../assets/team/pg8.png";
+
 
 const data = [
   {
@@ -82,9 +78,9 @@ const data = [
 ];
 
 const Gallery4 = ({
-  title = "Ecell Newsletters",
+  title = "EIC Newsletters",
   description = "Our newsletters bring you the latest updates, event highlights, and inspiring stories from the world of innovation and entrepreneurship.",
-  items = data,
+  items = data
 }) => {
   const [carouselApi, setCarouselApi] = useState();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -115,9 +111,7 @@ const Gallery4 = ({
             <h2 className="text-5xl text-center md:text-left text-white font-[vampire] font-medium md:text-4xl lg:text-7xl">
               {title}
             </h2>
-            <p className="max-w-lg text-white  text-center md:text-left font-[font1] text-sm md:text-xl  text-muted-foreground">
-              {description}
-            </p>
+            <p className="max-w-lg text-white  text-center md:text-left font-[font1] text-sm md:text-xl  text-muted-foreground">{description}</p>
           </div>
           <div className="hidden shrink-0 gap-2 md:flex">
             {/* <Button
@@ -152,41 +146,40 @@ const Gallery4 = ({
                 dragFree: true,
               },
             },
-          }}
-        >
-          <CarouselContent className="  mx-4  2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
+          }}>
+          <CarouselContent
+            className="  mx-4  2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
             {items.map((item) => (
-              <CarouselItem
-                key={item.id}
-                className=" max-w-[320px] pl-[20px] lg:max-w-[360px]"
-              >
-                <Link to={item.href} className="group rounded-xl">
-                  <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+              <CarouselItem key={item.id} className=" max-w-[320px] pl-[20px] lg:max-w-[360px]">
+                <a href={item.href} className="group rounded-xl">
+                  <div
+                    className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 h-full bg-[linear-gradient(hsl(var(--primary)/0),hsl(var(--primary)/0.4),hsl(var(--primary)/0.8)_100%)] mix-blend-multiply" />
+                      className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105" />
                     <div
-                      className="absolute h-[200px] inset-x-0 bottom-0 flex flex-col items-start p-6 md:p-8 
+                      className="absolute inset-0 h-full bg-[linear-gradient(hsl(var(--primary)/0),hsl(var(--primary)/0.4),hsl(var(--primary)/0.8)_100%)] mix-blend-multiply" />
+                    <div
+  className="absolute h-[200px] inset-x-0 bottom-0 flex flex-col items-start p-6 md:p-8 
              text-primary-foreground rounded-b-2xl
              bg-gradient-to-t from-black/60 via-black/40 to-transparent 
-             backdrop-blur-md border-t border-white/20 shadow-lg"
-                    >
-                      <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
-                        {item.title}
-                      </div>
-                      <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9 text-white/90">
-                        {item.description}
-                      </div>
-                      <div className="flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors">
-                        Read more{" "}
-                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                      </div>
-                    </div>
+             backdrop-blur-md border-t border-white/20 shadow-lg">
+  <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
+    {item.title}
+  </div>
+  <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9 text-white/90">
+    {item.description}
+  </div>
+  <div className="flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors">
+    Read more{" "}
+    <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+  </div>
+</div>
+
+
                   </div>
-                </Link>
+                </a>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -199,8 +192,7 @@ const Gallery4 = ({
                 currentSlide === index ? "bg-primary" : "bg-primary/20"
               }`}
               onClick={() => carouselApi?.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+              aria-label={`Go to slide ${index + 1}`} />
           ))}
         </div>
       </div>
